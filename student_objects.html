@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Studentlist</title>
+    <link rel="stylesheet" href="student_objects.css">
+  </head>
+  <body>
+<div class="container">
+  <h1>Hogwarts students</h1>
+    <div id="searchWrapper">
+    <input type="text" name="searchBar" id="searchBar" placeholder="Search for a student">
+    </div>
+</div>   
+
+    <p>
+      <button class="filter" data-action="filter" data-filter="expelled">Naughty List</button>
+      <button class="filter" data-action="filter" data-filter="gryffindor">Gryffindor</button>
+      <button class="filter" data-action="filter" data-filter="slytherin">Slytherin</button>
+      <button class="filter" data-action="filter" data-filter="ravenclaw">Ravenclaw</button>
+      <button class="filter" data-action="filter" data-filter="hufflepuff">Hufflepuff</button>
+      <button class="filter" data-action="filter" data-filter="all">All</button>
+    </p>
+
+    <hr>
+    
+    
+    <table id="list">
+      <thead>
+        <tr id="sorting">
+          <th data-action="sort" data-sort-direction="asc" data-sort="prefect">Prefects</th>
+          <th data-action="sort" data-sort-direction="asc" data-sort="expelled">Expelling</th>
+          <th data-action="sort" data-sort-direction="asc" data-sort="bloodstatus">Bloodstatus</th>
+          <th data-action="sort" data-sort-direction="asc" data-sort="first_name">Firstname</th>
+          <th data-action="sort" data-sort-direction="asc" data-sort="nick_name">Nickname</th>
+          <th data-action="sort" data-sort-direction="asc" data-sort="middle_name">Middlename</th>
+          <th data-action="sort" data-sort-direction="asc" data-sort="last_name">Lastname</th>
+          <th data-action="sort" data-sort-direction="asc" data-sort="gender">Gender</th>
+          <th data-action="sort" data-sort-direction="asc" data-sort="house">House</th>
+          <th data-action="sort" data-sort-direction="asc" data-sort="inquisitorial">Inquisitorial</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <!-- student template will be copied and inserted here -->
+      </tbody>
+    </table>
+
+    <template id="student">
+      <tr>
+        <td data-field="prefect" id="prefect">PREFECT</td>
+        <td data-field="expelled" id="expel">EXPEL</td>
+        <td data-field="bloodstatus">BLOODSTATUS</td>
+        <td data-field="first_name">NAME</td>
+        <td data-field="nick_name">NICKNAME</td>
+        <td data-field="middle_name">MIDDLENAME</td>
+        <td data-field="last_name">LASTNAME</td>
+        <td data-field="gender">GENDER</td>
+        <td data-field="house">HOUSE</td>
+        <td data-field="inquisitorial">INQUISITORIAL</td>
+        <td><button>Show student</button></td> 
+      </tr>
+    </template>
+
+
+
+    <section id="singleview">
+      <article> 
+        <div id="close">X</div>
+        <img id="singleviewImage"/>
+        <div id="singleviewName">name</div>
+        <div id="singleviewGender">gender</div>
+        <div id="singleviewHouse">house</div>
+        <div id="studentExpelled">expelled</div>
+        <div id="studentPrefect">expelled</div>
+        <div id="singleviewBloodstatus">bloodstatus</div>
+        <div id="singleviewInquisitorial"> Inquisitorial</div>
+        <img id="crestImage"/>
+       <!--If the student is:
+prefect or not
+expelled or not
+member of inquisitorial squad or not-->
+      </article>
+    </section>
+
+    <div id="remove_prefect" class="hidden">
+      <div id="dialog">
+          <button class="closebutton">X</button>
+           <h1>Warning!</h1>
+           <p>There can only be two prefect from each house.<br>
+                Do you want to remoce one of the existing prefects?</p>
+                <div class="sidebyside">
+          <button id="removeA">Remove <span data-field="prefectA"></span></button>
+          <button id="removeB">Remove <span data-field="prefectB"></span></button>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div id="studentCountAll"></div>
+      <div id="currentlyShown"></div>
+      <div id="expelledCount"></div>
+      <div id="notExpelledCount"></div>
+      <div id="houseNumberGryffindor"></div>
+      <div id="houseNumberSlytherin"></div>
+      <div id="houseNumberRavenclaw"></div>
+      <div id="houseNumberHufflepuff"></div>
+    </div>
+
+
+    <script src="student_objects.js"></script>
+  </body>
+</html>

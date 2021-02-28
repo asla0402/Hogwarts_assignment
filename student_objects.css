@@ -1,0 +1,109 @@
+[data-action] {
+  cursor: pointer;
+}
+
+#expel {
+  cursor: pointer;
+}
+
+#prefect {
+  cursor: pointer;
+}
+
+#sorting th.sortby {
+  text-decoration: underline;
+}
+
+#sorting th.sortby[data-sort-direction="asc"]::after {
+  content: "↑";
+}
+
+#sorting th.sortby[data-sort-direction="desc"]::after {
+  content: "↓";
+}
+
+#list {
+  border-collapse: collapse;
+}
+
+#list tbody tr td {
+  padding: 4px;
+}
+
+#list tbody tr:nth-child(odd) td {
+  background-color: lightblue;
+  border-right: rgb(240, 249, 255) 1px dotted;
+}
+
+#list tbody tr:nth-child(even) td {
+  border-right: rgb(171, 219, 252) 1px dotted;
+}
+
+#singleview {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+}
+
+#singleview article {
+  width: 80vw;
+  height: 80vh;
+  margin: 4rem auto;
+  background-color: white;
+}
+
+#close {
+  position: fixed;
+  top: 20;
+  right: 11vw;
+  color: black;
+  border-radius: 5px;
+  padding: 0.1em;
+  cursor: pointer;
+}
+
+#crestImage {
+  max-height: 150px;
+  max-width: 150px;
+}
+
+#dialog {
+  box-shadow: 2px 2px 10px #333;
+  background-color: rgb(228, 227, 227);
+  border-radius: 12px;
+  padding: 2em;
+  position: relative;
+}
+
+.removeA {
+  background-color: rgb(171, 219, 252);
+}
+
+.removeA {
+  background-color: rgb(171, 219, 252);
+}
+
+.closebutton {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+#remove_prefect {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hidden {
+  visibility: hidden;
+}
